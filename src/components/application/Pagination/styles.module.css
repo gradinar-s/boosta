@@ -1,0 +1,54 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.pagination a {
+    text-align: center;
+    line-height: 2.6;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: #3c3e44;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.pagination li:not(:last-child) {
+    margin-right: 0.75rem;
+}
+
+.pagination :global(.selected) {
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .pagination li:first-child,
+    .pagination li:last-child,
+    .pagination li:nth-last-child(2) {
+        margin-right: 0;
+    }
+
+    .pagination :global(.previous),
+    .pagination :global(.next) {
+        width: 100%;
+    }
+
+    .pagination :global(.previous) a,
+    .pagination :global(.next) a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+}

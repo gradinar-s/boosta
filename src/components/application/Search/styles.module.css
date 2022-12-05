@@ -1,0 +1,24 @@
+.root {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.label {
+    font-size: 32px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+    .root {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .label {
+        margin-bottom: 0.75rem;
+        margin-right: 0;
+    }
+}
